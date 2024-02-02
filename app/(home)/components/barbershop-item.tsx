@@ -1,6 +1,9 @@
+"use client";
+
+import { Barbershop } from "@prisma/client";
+import Link from "next/link";
 import Image from "next/image";
 import { StarIcon } from "lucide-react";
-import { Barbershop } from "@prisma/client";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -30,7 +33,8 @@ const BarberShopItem = ({ barbershop }: BarberShopItemProps) => {
                         width={0}
                         sizes="100vw"
                         fill
-                        className="rounded-2xl object-cover"
+                        className="rounded-2xl"
+                        style={{objectFit: "cover"}}
                     />
                 </div>
 
@@ -38,7 +42,9 @@ const BarberShopItem = ({ barbershop }: BarberShopItemProps) => {
                     <h2 className="font-bold mt-2 overflow-hidden text-ellipsis text-nowrap">{barbershop.name}</h2>
                     <p className="text-sm text-gray-400 overflow-hidden text-ellipsis text-nowrap">{barbershop.address}</p>
                     <Button className="w-full mt-3" variant="secondary">
-                        Reservar
+                        <Link href={`/barbershops/${barbershop.id}`}>
+                            Reservar
+                        </Link>
                     </Button>
                 </div>
             </CardContent>
