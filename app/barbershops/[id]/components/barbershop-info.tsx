@@ -15,7 +15,6 @@ interface BarbershopInfoProps {
 }
 
 const BarbershopInfo = ({barbershop}: BarbershopInfoProps) => {
-
     return ( 
         <div>
             <div className="h-[250px] w-full relative">
