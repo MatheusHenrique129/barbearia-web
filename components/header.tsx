@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { MenuIcon } from "lucide-react";
 
@@ -11,7 +13,7 @@ const Header = () => {
                 <Image src="/logo.png" alt="Logo Barber" height={22} width={120} />
                 <Button variant="outline" size="icon">
                     <MenuIcon size={24} />
-                </Button>
+                </Button>               
             </CardContent>
         </Card>
       );

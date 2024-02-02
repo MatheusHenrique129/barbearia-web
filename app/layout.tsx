@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import type { Metadata } from "next";
+import AuthProvider from "./providers/auth";
 import Footer from "@/components/footer";
 import "./globals.css";
 
@@ -18,10 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} dark`}>{children}
-        <div className="min-h-full relative">
-          <Footer />
-        </div>
+      <body className={`${inter.className} dark`}>
+        <AuthProvider>
+          {children}
+          <div className="min-h-full relative">
+            <Footer />
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );
