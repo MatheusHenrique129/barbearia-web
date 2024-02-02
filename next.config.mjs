@@ -1,9 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  //   images: {
-  //     remotePatterns: {
-  //     },
-  //   },
+  images: {
+    remotePatterns: [
+      {
+        hostname: "utfs.io",
+      },
+    ],
+  },
 };
 
 export default nextConfig;
