@@ -14,7 +14,6 @@ interface BarberShopItemProps {
 }
 
 const BarberShopItem = ({ barbershop }: BarberShopItemProps) => {
-
     return (  
         <Card className="min-w-[167px] max-w-[167px] rounded-2xl">
             <CardContent className="px-1 py-0">
@@ -43,7 +42,7 @@ const BarberShopItem = ({ barbershop }: BarberShopItemProps) => {
                     <p className="text-sm text-gray-400 overflow-hidden text-ellipsis text-nowrap">{barbershop.address}</p>
                     <Button className="w-full mt-3" variant="secondary">
                         <Link href={`/barbershops/${barbershop.id}`}>
-                            Reservar
+                            Ver Mais
                         </Link>
                     </Button>
                 </div>
